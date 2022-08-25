@@ -95,7 +95,9 @@ fieldset {
   border-radius: 3px;
 }
 input {
-  padding: 13px;
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-bottom: 10px;
   border: 1px solid rgb(146, 145, 145);
   border-radius: 3px;
   background-color: rgb(248, 248, 239);
@@ -118,7 +120,7 @@ input:focus {
 }
 .input-box {
   position: relative;
-  margin-top: 20px;
+  margin-top: 23px;
   font-weight: 600;
   font-family: "Zen Maru Gothic", sans-serif;
   letter-spacing: 0.1em;
@@ -126,39 +128,56 @@ input:focus {
 .input-user {
   width: 50%;
   outline: none;
-}
-.cpf-label {
-  padding-right: 5rem;
+  padding-right: 2.5rem;
 }
 .name-label,
 .email-label,
-.cpf-label,
+.address-label,
 .tel-label {
   position: absolute;
   left: 2.16%;
-  top: 20%;
+  top: -30%;
   transition: all 0.3s;
   background-color: rgb(248, 248, 239);
   border-radius: 3px;
   cursor: text;
 }
-#cpf:focus + label,
-#cpf:valid + label {
-  top: -26%;
-  padding-right: 0.3rem;
-  font-size: 14px;
-}
-input:focus + label,
-input:valid + label {
-  top: -26%;
-  font-size: 14px;
+.address-label,
+.tel-label {
+  top: -32%;
 }
 label {
   padding: 0rem 0.3em;
 }
+.input-box i {
+  color: #219e08;
+  position: absolute;
+  top: 28%;
+  font-size: 19px;
+  left: 45%;
+}
+#submit-error {
+  text-align: center;
+}
+#error-name,
+#error-email,
+#error-phoneNumber,
+#error-address,
+#submit-error {
+  color: #af0606;
+  padding-left: 2px;
+}
+.fa-arrow-up {
+  padding-left: 2.5px;
+  font-size: 15px;
+}
 .img {
   max-width: 250px;
   float: right;
+}
+.input-box .error {
+  color: #af0606; 
+  font-size: 9px;
 }
 img {
   position: absolute;
@@ -258,6 +277,13 @@ input {
 @media screen and (max-width: 640px) {
   img {
     top: -15.5%;
+  }
+  .input-box i {
+    color: #219e08;
+    position: absolute;
+    top: 28%;
+    font-size: 19px;
+    left: 91%;
   }
   form {
     width: 470px;
