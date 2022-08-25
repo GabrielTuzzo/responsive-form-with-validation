@@ -149,10 +149,17 @@ input:focus {
 label {
   padding: 0rem 0.3em;
 }
-.input-box i {
+.fa-check {
   color: #219e08;
   position: absolute;
-  top: 28%;
+  top: 29%;
+  font-size: 19px;
+  left: 45%;
+}
+.fa-circle-xmark {
+  color: #992305;
+  position: absolute;
+  top: 19%;
   font-size: 19px;
   left: 45%;
 }
@@ -278,11 +285,10 @@ input {
   img {
     top: -15.5%;
   }
-  .input-box i {
-    color: #219e08;
-    position: absolute;
-    top: 28%;
-    font-size: 19px;
+  .fa-check {
+    left: 91%;
+  }
+  .fa-circle-xmark {
     left: 91%;
   }
   form {
@@ -316,6 +322,18 @@ input {
     display: grid;
     grid-template-columns: 2fr 2fr;
     margin-top: 1em;
+  }
+  #error-name,
+  #error-email,
+  #error-phoneNumber,
+  #error-address {
+    font-size: 15px;
+  }
+  .fa-check {
+    left: 89%;
+  }
+  .fa-circle-xmark {
+    left: 89%;
   }
   .label5 {
     line-height: 1.3rem;
@@ -351,6 +369,15 @@ input {
 @media screen and (max-width: 430px) {
   label {
      font-size: 15px;
+  }
+  .fa-check {
+    left: 89%;
+    font-size: 17px;
+  }
+  .fa-circle-xmark {
+    left: 89%;
+    top: 18.5%;
+    font-size: 17px;
   }
   .name-label,
 .email-label,
@@ -410,9 +437,15 @@ textarea {
 }
 }
 @media screen and (max-width: 400px) {
-  
   .btn {
     font-size: 13px;
+  }
+  #error-name,
+  #error-email,
+  #error-phoneNumber,
+  #error-address {
+    font-size: 14px;
+    letter-spacing: 1.5px;
   }
 }
 @media screen and (max-width: 380px) {
@@ -421,6 +454,15 @@ textarea {
   }
   textarea {
     max-width: 246px;
+  }
+  .fa-check {
+    left: 87.5%;
+    font-size: 17px;
+  }
+  .fa-circle-xmark {
+    left: 87.5%;
+    top: 18.5%;
+    font-size: 17px;
   }
   #selecionar {
     margin-top: 0.5rem;
@@ -448,6 +490,12 @@ textarea {
   textarea {
     max-width: 216px;
     font-size: 13.5px;
+  }
+  .fa-check {
+    left: 86%;
+  }
+  .fa-circle-xmark {
+    left: 86%;
   }
 }
 @media screen and (max-width: 290px) {
@@ -483,6 +531,16 @@ textarea {
 @media screen and (max-width: 270px) {
   form {
     width: 210px;
+  }
+  .fa-check {
+    left: 84%;
+    font-size: 15px;
+    top: 33%;
+  }
+  .fa-circle-xmark {
+    left: 84%;
+    top: 20%;
+    font-size: 15px;
   }
   textarea {
     max-width: 176px;
