@@ -8,9 +8,12 @@ const username = document.querySelector('#username')
 const emailInput = document.querySelector('#email')
 const phoneInput = document.querySelector('#tel')
 const addressInput = document.querySelector('#address')
+const button = document.querySelector('#btnID')
 
-username.addEventListener('keyup', () => {
+username.addEventListener('keyup', function nameValidate() {
     const name = username.value
+  
+    event.preventDefault();
 
     if (name.value === '') {
         nameError.innerHTML = '<i class="fas fa-solid fa-circle-xmark"></i>'
@@ -26,7 +29,7 @@ username.addEventListener('keyup', () => {
     return true
 })
 
-emailInput.addEventListener('keyup', () => {
+emailInput.addEventListener('keyup', function emailValidate() {
     const email = emailInput.value
 
     if (email.value === '') {
@@ -43,23 +46,59 @@ emailInput.addEventListener('keyup', () => {
     emailError.innerHTML = '<i class="fa fa-solid fa-check"></i>'
     return true
 })
-phoneInput.addEventListener('keyup', () => {
+phoneInput.addEventListener('keyup', function phoneNumberValidate() {
     const phone = phoneInput.value
 
     if (phone.value === '') {
-        phoneNumberError.innerHTML = 'Phone number is required'
+        phoneNumberError.innerHTML = 'Email is required'
         phoneNumberError.innerHTML += '<i class="fas fa-solid fa-circle-xmark"></i>'
         return false
     }
-    if (phone.lenght <= 12) {
-        phoneNumberError.innerHTML = 'write a valid phone number'
-        phoneNumberError.innerHTML += '<i class="fas fa-solid fa-circle-xmark"></i>'
-        return false
+    
+    if(!phone.match(/^(\+{0,})(\d{0,})([(]{1}\d{1,3}[)]{0,}){0,}(\s?\d+|\+\d{2,3}\s{1}\d+|\d+){1}[\s|-]?\d+([\s|-]?\d+){1,2}(\s){0,}$/gm)) {
+    /*
+    Will accept:
+    (123) 456-7890
+    (123)456-7890
+    123-456-7890
+    1234567890
+    +31636363634
+    +3(123) 123-12-12
+    +3(123)123-12-12
+    +3(123)1231212
+    +3(123) 12312123
+    +3(123) 123 12 12
+    075-63546725
+    +7910 120 54 54
+    910 120 54 54
+    8 999 999 99 99
+    */ 
+    phoneNumberError.innerHTML = 'Please enter a valid phone number'
+    phoneNumberError.innerHTML += '<i class="fas fa-solid fa-circle-xmark"></i>'
+    return false
     }
+    
     phoneNumberError.innerHTML = '<i class="fa fa-solid fa-check"></i>'
     return true
 })
+addressInput.addEventListener('keyup', function addressValidate() {
+    const address = addressInput.value
+    const required = 25
+    const msg = required - address.length
 
+    if (msg > 0) {
+        addressError.innerHTML = msg + ' more characters required'
+        addressError.innerHTML += '<i class="fas fa-solid fa-circle-xmark"></i>'
+        return false
+    }
+    addressError.innerHTML = '<i class="fa fa-solid fa-check"></i>'
+    return true
+})
 
-
+button.addEventListener('click', () => {
+    if (!nameValidate() || !emailValidate() || !phoneNumberValidate() || !addressValidate()) {
+        submitError.innerHTML = 'Please check fields'
+        return false
+    }
+})
 

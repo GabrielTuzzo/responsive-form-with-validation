@@ -14,7 +14,7 @@ body {
 }
 ::selection {
   background: rgb(32, 32, 32);
-  color: rgb(240, 235, 235);
+  color: rgb(255, 255, 255);
 }
 .main-1,
 .radios,
@@ -100,7 +100,7 @@ input {
   padding-bottom: 10px;
   border: 1px solid rgb(146, 145, 145);
   border-radius: 3px;
-  background-color: rgb(248, 248, 239);
+  background-color: transparent;
 }
 input[type="text"], input[name="email"] {
   font-size: 15px;
@@ -199,6 +199,7 @@ img {
   text-align: center;
   margin-bottom: 10px;
   margin-top: 20px;
+  pointer-events: all;
 }
 a {
   text-decoration: none;
@@ -217,6 +218,7 @@ a {
   cursor: pointer;
   font-family: "poppins", sans-serif;
   color: #000;
+  pointer-events: all;
 }
 .btn:hover > .fa-chevron-right {
   transform: translateX(8px);
@@ -227,14 +229,7 @@ a {
   padding: 9px;
   border-radius: 3px;
 }
-.btn:focus {
-  background: rgb(51, 50, 50);
-  border: 2px solid rgb(230, 227, 227);
-  color: rgb(231, 227, 227);
-  filter: drop-shadow(1px 1px rgb(241, 239, 239));
-  padding: 7;
-  border-radius: 10px;
-}
+
 textarea:focus {
   border: 1px solid #000;
 }
@@ -383,7 +378,6 @@ input {
 .email-label,
 .cpf-label,
 .tel-label {
-  top: 23%;
   font-size: 14.5px;
 }
 input[type="text"], input[name="email"] {
@@ -392,17 +386,7 @@ input[type="text"], input[name="email"] {
 input[type="tel"] {
   font-size: 14px;
 }
-#cpf:focus + label,
-#cpf:valid + label {
-  top: -26%;
-  padding-right: 0.3rem;
-  font-size: 12.5px;
-}
-input:focus + label,
-input:valid + label {
-  top: -26%;
-  font-size: 12.5px;
-}
+
 legend {
   font-size: 16.5px;
 }
@@ -415,13 +399,6 @@ textarea {
 .input-user {
   padding-top: 0.7rem;
   padding-bottom: 0.60rem;
-}
-.name-label,
-.email-label,
-.cpf-label,
-.tel-label {
-top: 18.5%;
-font-size: 14.5px;
 }
 label {
 font-size: 14px;

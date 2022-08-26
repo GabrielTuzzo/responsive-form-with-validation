@@ -19,22 +19,22 @@
         <fieldset class="field-1">
             <legend>Register Form</legend>
             <div class="input-box">            
-                <input type="text" name="nome" class="input-user" id="username" placeholder="First and Last Name">
+                <input type="text" name="nome" class="input-user" id="username" placeholder="First and Last Name" required>
                 <label class="name-label" for="name">Name</label>
                 <div id="error-name"></div>
             </div>
             <div class="input-box">            
-                <input type="email" name="email" id="email" class="input-user"> 
+                <input type="email" name="email" id="email" class="input-user" required> 
                 <label class="email-label" for="email">Email</label>
                 <div id="error-email"></div>
             </div>
             <div class="input-box">            
-                <input type="tel" name="telefone" id="tel" class="input-user" placeholder="(+DDD)">
+                <input type="tel" name="telefone" id="tel" class="input-user" placeholder="(DDD)" required>
                 <label class="tel-label" for="tel">Phone Number</label>
                 <div id="error-phoneNumber"></div>
             </div>
             <div class="input-box">            
-              <input type="text" name="address" id="address" class="input-user" maxlength="40">
+              <input type="text" name="address" id="address" class="input-user" maxlength="40" required>
               <label class="address-label" for="address">Address</label>
               <div id="error-address"></div>
           </div>
@@ -46,8 +46,6 @@
 <!------------------------------------------------Fim do 1° fieldset----------------------------------------------->
                 <br>
         <fieldset>
-            
-            
             <legend>Your Review:</legend>
             <div class="main-1">
                 <label for="selecionar" class="select">
@@ -175,7 +173,7 @@
             Why would you like to join in this company?
                 <br>
             <label for="comments">
-                <textarea name="Comments" id="comments" cols="60" rows="6" contenteditable="true">I would like to join in this company because...</textarea>
+                <textarea name="Comments" id="comments" cols="60" rows="6" contenteditable="true"></textarea>
             </label>
         </p>
         <label>
@@ -183,7 +181,7 @@
         Sing me up for emails updates
         </label>
         <br><br>
-        <div class="button-p"><button href="" class="btn" type="submit">Submit Review <i class="fas fa-chevron-right"></i></button></div>
+        <div class="button-p"><button class="btn" type="button" onclick="return validateForm()">Submit Review <i class="fas fa-chevron-right"></i></button></div>
         <div id="submit-error"></div>
         </fieldset>
         </form>
