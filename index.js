@@ -56,7 +56,7 @@ function  inputCheckphoneNumber() {
     const phone = phoneInput.value
     
     if(!phone.match(/^(\+{0,})(\d{0,})([(]{1}\d{1,3}[)]{0,}){0,}(\s?\d+|\+\d{2,3}\s{1}\d+|\d+){1}[\s|-]?\d+([\s|-]?\d+){1,2}(\s){0,}$/gm)) {
-    phoneNumberError.innerHTML = 'Please enter a valid phone number'
+    phoneNumberError.innerHTML = 'Invalid phone number'
     phoneNumberError.innerHTML += '<i class="fas fa-solid fa-circle-xmark"></i>'
     return false
     }
@@ -127,7 +127,7 @@ phoneInput.addEventListener('blur', function phoneNumberValidate() {
     910 120 54 54
     8 999 999 99 99
     */ 
-    phoneNumberError.innerHTML = 'Please enter a valid phone number'
+    phoneNumberError.innerHTML = 'Invalid phone number'
     phoneNumberError.innerHTML += '<i class="fas fa-solid fa-circle-xmark"></i>'
     return false
     }
@@ -197,7 +197,7 @@ phoneInput.addEventListener('keyup', function phoneNumberValidate() {
     910 120 54 54
     8 999 999 99 99
     */ 
-    phoneNumberError.innerHTML = 'Please enter a valid phone number'
+    phoneNumberError.innerHTML = 'Invalid phone number'
     phoneNumberError.innerHTML += '<i class="fas fa-solid fa-circle-xmark"></i>'
     return false
     }

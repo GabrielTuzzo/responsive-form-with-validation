@@ -95,7 +95,7 @@ fieldset {
   border-radius: 3px;
 }
 input {
-  padding-top: 15px;
+  padding-top: 17px;
   padding-left: 10px;
   padding-bottom: 10px;
   border: 1px solid rgb(146, 145, 145);
@@ -136,7 +136,7 @@ input:focus {
 .tel-label {
   position: absolute;
   left: 2.16%;
-  top: -30%;
+  top: -35%;
   transition: all 0.3s;
   background-color: rgb(248, 248, 239);
   border-radius: 3px;
@@ -374,11 +374,11 @@ input {
     font-size: 17px;
   }
   .name-label,
-.email-label,
-.cpf-label,
-.tel-label {
-  font-size: 14.5px;
-}
+  .email-label,
+  .address-label,
+  .tel-label {
+    top: -41%;
+  }
 input[type="text"], input[name="email"] {
   font-size: 14px;
 }
@@ -396,8 +396,11 @@ textarea {
   font-size: 14px;
 }
 .input-user {
-  padding-top: 0.7rem;
+  padding-top: 0.8rem;
   padding-bottom: 0.60rem;
+}
+.input-box {
+  margin-top: 25px;
 }
 label {
 font-size: 14px;
@@ -411,6 +414,7 @@ form {
 textarea {
   max-width: 290px;
 }
+
 }
 @media screen and (max-width: 400px) {
   .btn {
@@ -458,6 +462,7 @@ textarea {
   line-height: 1.3rem;
   padding-bottom: 0.5rem;
 } 
+.tel-label {}
 }
 @media screen and (max-width: 330px) {
   form {
