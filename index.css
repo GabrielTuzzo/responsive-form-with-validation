@@ -163,16 +163,25 @@ label {
   font-size: 19px;
   left: 45%;
 }
-#submit-error {
-  text-align: center;
-}
 #error-name,
 #error-email,
 #error-phoneNumber,
-#error-address,
-#submit-error {
+#error-address {
   color: #af0606;
   padding-left: 2px;
+}
+#submit-error {
+  text-align: center;
+  background-color: #992305;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 2px;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+}
+.asterisk {
+  font-size: 18.5px;
+  padding-left: 2.5px;
 }
 .fa-arrow-up {
   padding-left: 2.5px;
@@ -263,22 +272,11 @@ input {
   color: rgba(0, 0, 0, 0.89);
 } 
 @media screen and (max-width: 768px) {
-  .img {
-    max-width: none;
-  }
-  img {
-    top: 14%;
-  }
   .img-form {
-    width: 250px;
+    display: none;
   }
   form {
     width: 580px;
-  }
-}
-@media screen and (max-width: 640px) {
-  img {
-    top: -15.5%;
   }
   .fa-check {
     left: 91%;
@@ -309,6 +307,7 @@ input {
     max-width: 430px;
   }
 }
+
 @media screen and (max-width: 520px) {
   form {
     width: 370px;
