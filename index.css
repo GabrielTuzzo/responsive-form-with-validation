@@ -95,7 +95,7 @@ fieldset {
   border-radius: 3px;
 }
 input {
-  padding-top: 17px;
+  padding-top: 17.5px;
   padding-left: 10px;
   padding-bottom: 10px;
   border: 1px solid rgb(146, 145, 145);
@@ -109,6 +109,7 @@ input[type="text"], input[name="email"] {
   letter-spacing: 0.1em;
   text-transform: capitalize;
 }
+
 input[name="email"] {
   text-transform: lowercase;
 }
