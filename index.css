@@ -120,7 +120,7 @@ input:focus {
 }
 .input-box {
   position: relative;
-  margin-top: 35px;
+  margin-top: 40px;
   font-weight: 600;
   font-family: "Zen Maru Gothic", sans-serif;
   letter-spacing: 0.1em;
@@ -462,7 +462,6 @@ textarea {
   line-height: 1.3rem;
   padding-bottom: 0.5rem;
 } 
-.tel-label {}
 }
 @media screen and (max-width: 330px) {
   form {
