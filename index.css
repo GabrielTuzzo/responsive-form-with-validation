@@ -478,7 +478,7 @@ textarea {
     left: 86%;
   }
 }
-@media screen and (max-width: 290px) {
+@media screen and (max-width: 270px) {
   form {
     width: 230px;
   }
@@ -505,37 +505,6 @@ textarea {
     position: absolute;
     top: -13%;
     right: 0%;
-    filter: drop-shadow(3px 3px #aaa);
-  }
-}
-@media screen and (max-width: 270px) {
-  form {
-    width: 210px;
-  }
-  .fa-check {
-    left: 84%;
-    font-size: 15px;
-    top: 33%;
-  }
-  .fa-circle-xmark {
-    left: 84%;
-    top: 20%;
-    font-size: 15px;
-  }
-  textarea {
-    max-width: 176px;
-    padding-right: 5px;
-  }
-  .label4 {
-    line-height: 1.1rem;
-  }
-  .img-form {
-    width: 65px;
-  }
-  img {
-    position: absolute;
-    top: -13%;
-    right: -640%;
     filter: drop-shadow(3px 3px #aaa);
   }
 }
