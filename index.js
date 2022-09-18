@@ -149,6 +149,7 @@ addressInput.addEventListener('blur', function addressValidate() {
     addressError.innerHTML = '<i class="fa fa-solid fa-check"></i>'
     return true
 })
+
 /*---------------------------------Check the input fields while typing----------------------------------*/
 
 username.addEventListener('keyup', function nameValidate() {
