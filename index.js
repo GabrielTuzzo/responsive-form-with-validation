@@ -67,7 +67,7 @@ function  inputCheckphoneNumber() {
 
 function  inputCheckphoneAddress() {
     const address = addressInput.value
-    const required = 25
+    const required = 30
     const msg = required - address.length
 
     if (msg > 0) {
@@ -138,7 +138,7 @@ phoneInput.addEventListener('blur', function phoneNumberValidate() {
 
 addressInput.addEventListener('blur', function addressValidate() {
     const address = addressInput.value
-    const required = 25
+    const required = 30
     const msg = required - address.length
 
     if (msg > 0) {
@@ -209,7 +209,7 @@ phoneInput.addEventListener('keyup', function phoneNumberValidate() {
 
 addressInput.addEventListener('keyup', function addressValidate() {
     const address = addressInput.value
-    const required = 25
+    const required = 30
     const msg = required - address.length
 
     if (msg > 0) {
