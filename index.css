@@ -262,7 +262,7 @@ textarea:focus {
   margin-top: 20px;
 }
 textarea {
-  max-width: 630px;
+  max-width: 645px;
   border-radius: 3px;
   background: rgb(223, 219, 219);
 }
